@@ -123,18 +123,38 @@ document.addEventListener('DOMContentLoaded', () => {
       const submitBtn = contactForm.querySelector('button[type="submit"]');
       const originalBtnText = submitBtn.innerHTML;
       
-      // Simulate loading state
+      // Submit to Formspree
       submitBtn.disabled = true;
       submitBtn.innerHTML = 'Sending... <i class="fa-solid fa-spinner fa-spin"></i>';
       statusMsg.style.display = 'none';
       
-      setTimeout(() => {
-        // Success simulation
-        showStatus(`Thank you, ${name}! Your message has been sent successfully.`, 'success');
-        contactForm.reset();
+      fetch('https://formspree.io/f/mlgvngjg', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          name: name,
+          email: email,
+          message: message
+        })
+      })
+      .then(response => {
+        if (response.ok) {
+          showStatus(`Thank you, ${name}! Your message has been sent successfully.`, 'success');
+          contactForm.reset();
+        } else {
+          showStatus('Oops! There was a problem submitting your form.', 'error');
+        }
+      })
+      .catch(() => {
+        showStatus('Oops! There was a network error. Please try again.', 'error');
+      })
+      .finally(() => {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalBtnText;
-      }, 1500);
+      });
     });
   }
 

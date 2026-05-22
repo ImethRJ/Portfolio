@@ -39,7 +39,7 @@ export class TerminalSimulator {
     this.printLine(' ', 'text-secondary');
     
     this.updateCursorPosition();
-    this.input.focus();
+    this.input.focus({ preventScroll: true });
   }
 
   updateCursorPosition() {

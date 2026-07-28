@@ -160,15 +160,15 @@ export class TerminalSimulator {
   }
 
   printSkills() {
-    this.printLine('<div style="color:#38bdf8; font-weight:600; margin-bottom:0.25rem;">Technical Skills Inventory:</div>', 'terminal-output');
+    this.printLine('<div style="color:#38bdf8; font-weight:600; margin-bottom:0.25rem;">Categorized Technical Competencies:</div>', 'terminal-output');
     this.printLine(`
       <table class="terminal-table">
-        <tr><td>Languages</td><td>Java, JavaScript (ES6+), Python, C++, C, SQL</td></tr>
-        <tr><td>Frameworks</td><td>React, Spring Boot, Flutter, Node.js, NestJS, Django</td></tr>
-        <tr><td>Web Dev</td><td>HTML5, CSS3, Tailwind CSS, PHP, Vite</td></tr>
-        <tr><td>Databases</td><td>PostgreSQL, MySQL, Firebase, Redis</td></tr>
-        <tr><td>IDEs & Tools</td><td>GitHub, VS Code, Docker, NetBeans, IntelliJ IDEA, Git</td></tr>
-        <tr><td>Interests</td><td>AI Integration, System Architecture, Prompt Engineering</td></tr>
+        <tr><td>Languages</td><td>Java, JavaScript (ES6+), TypeScript, Python 3.11+, C++, Pascal, HTML5, CSS3</td></tr>
+        <tr><td>Frameworks</td><td>React, Next.js, React Native, NestJS, Express.js, Node.js, Spring Boot, Django 5, Laravel, Flutter, jQuery, TailwindCSS, Bootstrap</td></tr>
+        <tr><td>Testing & Tools</td><td>JUnit 5, Jest, Playwright, Axios, Jackson, Pillow, nh3, Maven, npm</td></tr>
+        <tr><td>Databases & ORM</td><td>PostgreSQL 16, MySQL, MongoDB, Firebase, Supabase, Redis 7, H2 | Hibernate, Django ORM, Prisma, Laravel Eloquent</td></tr>
+        <tr><td>DevOps & Security</td><td>Docker, Spring Security, Django Security (RBAC), Passport.js JWT, Google Cloud (GCP), Vercel WSGI, Apache, WhiteNoise</td></tr>
+        <tr><td>IDEs, Tools & OS</td><td>Git, GitHub, Postman, Bruno, VS Code, IntelliJ IDEA, NetBeans, Visual Studio | Ubuntu Linux, Windows</td></tr>
       </table>
     `, 'terminal-output');
   }

@@ -177,9 +177,9 @@ export class TerminalSimulator {
     this.printLine('<div style="color:#38bdf8; font-weight:600; margin-bottom:0.5rem;">Featured Engineering Projects:</div>', 'terminal-output');
     this.printLine('  1. <strong style="color:#38bdf8;">Sector Educational Institute Management System</strong> <span style="color:#cbd5e1">- Full-stack NestJS + React platform (Upgraded 3rd-Year Project) featuring Barcode Attendance, 75/25 Teacher Commission Splits, F2 Cashier Billing, Ctrl+K Palette, & Headless PDF Receipts.</span>', 'terminal-output');
     this.printLine('  2. <strong style="color:#38bdf8;">SL-GreenRoot Market</strong> <span style="color:#cbd5e1">- Secure Supermarket Inventory & POS System (Python 3.11, Django 5, Tailwind CSS, PostgreSQL, Supabase, Vercel).</span>', 'terminal-output');
-    this.printLine('  3. <strong style="color:#38bdf8;">Vehicle Management System</strong> <span style="color:#cbd5e1">- Full-stack data portal calling Spring Boot APIs (React, Node, Java).</span>', 'terminal-output');
-    this.printLine('  4. <strong style="color:#38bdf8;">Educational E-Commerce</strong> <span style="color:#cbd5e1">- Custom authentication web store (PHP, HTML/CSS, SQL, WAMP).</span>', 'terminal-output');
-    this.printLine('  5. <strong style="color:#38bdf8;">Desktop Educational App</strong> <span style="color:#cbd5e1">- Desktop management console layout (Java Swing, NetBeans).</span>', 'terminal-output');
+    this.printLine('  3. <strong style="color:#38bdf8;">Sector Education Institute Website</strong> <span style="color:#cbd5e1">- Modern web portal (React, Vite, Tailwind CSS, Firebase Firestore & SSR). Live: https://sectorinstitute.lk</span>', 'terminal-output');
+    this.printLine('  4. <strong style="color:#38bdf8;">Desktop Educational App</strong> <span style="color:#cbd5e1">- Desktop management console layout (Java Swing, NetBeans).</span>', 'terminal-output');
+    this.printLine('  5. <strong style="color:#38bdf8;">Vehicle Management System</strong> <span style="color:#cbd5e1">- Full-stack data portal calling Spring Boot APIs (React, Node, Java).</span>', 'terminal-output');
   }
 
   printContact() {

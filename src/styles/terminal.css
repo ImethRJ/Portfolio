@@ -178,3 +178,53 @@
   box-shadow: 0 4px 12px rgba(2, 132, 199, 0.15);
   transform: translateY(-1px);
 }
+
+/* Terminal Mobile Responsiveness */
+@media (max-width: 768px) {
+  .terminal-container {
+    margin: 2rem auto;
+    border-radius: 10px;
+  }
+
+  .terminal-body {
+    height: 320px;
+    padding: 1rem;
+    font-size: 0.875rem;
+  }
+
+  .terminal-quick-links {
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .terminal-quick-cmd {
+    font-size: 0.78rem;
+    padding: 0.35rem 0.75rem;
+  }
+
+  .terminal-table td {
+    padding: 0.25rem 0.4rem;
+    font-size: 0.825rem;
+  }
+
+  .terminal-table td:first-child {
+    width: 110px;
+  }
+}
+
+@media (max-width: 480px) {
+  .terminal-body {
+    height: 290px;
+    padding: 0.85rem 0.75rem;
+    font-size: 0.825rem;
+  }
+
+  .terminal-prompt-line {
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  .terminal-prompt {
+    font-size: 0.8rem;
+  }
+}

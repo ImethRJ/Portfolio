@@ -8,8 +8,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // 2. Initialize Terminal Simulator
   new TerminalSimulator('portfolio-terminal');
   
-  // 3. Scroll Header Toggle
+  // 3. Scroll Header & Mobile Menu Toggle
   const header = document.getElementById('header');
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const navMenu = document.getElementById('nav-menu');
+
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
       header.classList.add('scrolled');
@@ -17,6 +20,37 @@ document.addEventListener('DOMContentLoaded', () => {
       header.classList.remove('scrolled');
     }
   });
+
+  if (mobileMenuBtn && navMenu) {
+    mobileMenuBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      navMenu.classList.toggle('mobile-active');
+      const icon = mobileMenuBtn.querySelector('i');
+      if (icon) {
+        if (navMenu.classList.contains('mobile-active')) {
+          icon.className = 'fa-solid fa-xmark';
+        } else {
+          icon.className = 'fa-solid fa-bars';
+        }
+      }
+    });
+
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('mobile-active');
+        const icon = mobileMenuBtn.querySelector('i');
+        if (icon) icon.className = 'fa-solid fa-bars';
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!navMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+        navMenu.classList.remove('mobile-active');
+        const icon = mobileMenuBtn.querySelector('i');
+        if (icon) icon.className = 'fa-solid fa-bars';
+      }
+    });
+  }
 
   // 4. Reveal Elements on Scroll (Intersection Observer)
   const revealElements = document.querySelectorAll('.reveal');

@@ -176,7 +176,7 @@ export class TerminalSimulator {
   printProjects() {
     this.printLine('Software Engineering Projects:', 'terminal-output');
     this.printLine('  1. <strong style="color:#00F2FE">Sector Educational Institute Management System</strong> - Full-stack NestJS + React platform (Upgraded 3rd-Year Project) featuring Barcode Attendance, 75/25 Teacher Commission Splits, F2 Cashier Billing, Ctrl+K Palette, & Headless PDF Receipts.', 'terminal-output');
-    this.printLine('  2. <strong style="color:#00F2FE">New City Hardware</strong> - E-commerce store with low-stock warnings & analytics (React, Firebase).', 'terminal-output');
+    this.printLine('  2. <strong style="color:#00F2FE">SL-GreenRoot Market</strong> - Secure Supermarket Inventory & POS System (Python 3.11, Django 5, Tailwind CSS, PostgreSQL, Supabase, Vercel).', 'terminal-output');
     this.printLine('  3. <strong style="color:#00F2FE">Vehicle Management System</strong> - Full-stack data portal calling Spring Boot APIs (React, Node, Java).', 'terminal-output');
     this.printLine('  4. <strong style="color:#00F2FE">Educational E-Commerce</strong> - Custom authentication web store (PHP, HTML/CSS, SQL, WAMP).', 'terminal-output');
     this.printLine('  5. <strong style="color:#00F2FE">Desktop Educational App</strong> - Desktop management console layout (Java Swing, NetBeans).', 'terminal-output');

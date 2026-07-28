@@ -164,41 +164,47 @@ document.addEventListener('DOMContentLoaded', () => {
     statusMsg.style.display = 'block';
   }
 
-  // 9. Sector Educational Institute Modal Handling
-  const sectorModal = document.getElementById('sector-modal');
-  const closeModalBtn = document.getElementById('close-sector-modal');
-
-  // Use event delegation for all modal open triggers
+  // 9. Modal Handling (Sector & GreenRoot Modals)
   document.addEventListener('click', (e) => {
-    const trigger = e.target.closest('.open-sector-modal-btn');
+    const trigger = e.target.closest('a[href^="#"], .open-sector-modal-btn, .open-greenroot-modal-btn');
     if (trigger) {
-      e.preventDefault();
-      if (sectorModal) {
-        sectorModal.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+      const href = trigger.getAttribute('href');
+      if (href && href.startsWith('#') && href.length > 1) {
+        const targetModal = document.querySelector(href);
+        if (targetModal && targetModal.classList.contains('modal-overlay')) {
+          e.preventDefault();
+          targetModal.classList.add('active');
+          document.body.style.overflow = 'hidden';
+        }
       }
     }
   });
 
-  if (closeModalBtn && sectorModal) {
-    closeModalBtn.addEventListener('click', () => {
-      sectorModal.classList.remove('active');
-      document.body.style.overflow = 'auto';
-    });
+  // Close modals on close button, backdrop click, or ESC key
+  document.querySelectorAll('.modal-overlay').forEach(modal => {
+    const closeBtn = modal.querySelector('.modal-close-btn');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', () => {
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      });
+    }
 
-    sectorModal.addEventListener('click', (e) => {
-      if (e.target === sectorModal) {
-        sectorModal.classList.remove('active');
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('active');
         document.body.style.overflow = 'auto';
       }
     });
+  });
 
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && sectorModal.classList.contains('active')) {
-        sectorModal.classList.remove('active');
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.modal-overlay.active').forEach(modal => {
+        modal.classList.remove('active');
         document.body.style.overflow = 'auto';
-      }
-    });
-  }
+      });
+    }
+  });
 });
 

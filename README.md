@@ -4,6 +4,7 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 
 A modern, high-performance, and interactive portfolio website designed for **Imeth Jayasinghe**, Software Engineering Graduate. Built using **Vite**, **Vanilla JavaScript**, HTML5, and custom **CSS Glassmorphism design system**.
 
@@ -14,7 +15,7 @@ A modern, high-performance, and interactive portfolio website designed for **Ime
 - **💻 Interactive CLI / Terminal Emulator:** Query profile info, projects, skills, contact details, or launch hidden commands directly from an interactive command-line interface.
 - **🌌 Dynamic Particle Canvas Background:** Interactive particle constellation network rendered dynamically on HTML5 Canvas with smooth cursor tracking.
 - **🎨 Glassmorphism & Modern UI Design System:** Sleek dark-mode aesthetic featuring subtle animations, smooth scrolling, and animated technical skill progress meters.
-- **🗂️ Filterable Projects Showcase:** Easily browse through full-stack web apps, mobile apps, desktop solutions, and CLI software with category filters.
+- **🗂️ Featured Projects Showcase:** Showcase of full-stack web apps, mobile apps, desktop solutions, and software projects.
 - **📩 Functional Contact Form:** Direct email delivery powered by Formspree integration with instant client-side validation and visual feedback.
 - **📱 Fully Responsive:** Optimized across desktop, tablet, and mobile displays.
 

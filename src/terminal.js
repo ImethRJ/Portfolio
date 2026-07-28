@@ -2,24 +2,24 @@ export class TerminalSimulator {
   constructor(containerId) {
     this.container = document.getElementById(containerId);
     if (!this.container) return;
-    
+
     this.body = this.container.querySelector('.terminal-body');
     this.input = this.container.querySelector('.terminal-input-element');
     this.cursor = this.container.querySelector('.terminal-custom-cursor');
-    
+
     this.history = [];
     this.historyIndex = -1;
-    
+
     this.init();
   }
 
   init() {
     this.input.addEventListener('keydown', (e) => this.handleKeydown(e));
     this.input.addEventListener('input', () => this.updateCursorPosition());
-    
+
     // Clicking anywhere in the terminal body focuses input
     this.body.addEventListener('click', () => this.input.focus());
-    
+
     // Hook up quick commands
     document.querySelectorAll('.terminal-quick-cmd').forEach(btn => {
       btn.addEventListener('click', (e) => {
@@ -29,12 +29,12 @@ export class TerminalSimulator {
         this.executeCommand(cmd);
       });
     });
-    
+
     // Initial welcome text
     this.printLine('Initializing Imeth Jayasinghe CLI Terminal v1.0.0...', 'text-muted');
     this.printLine('Type <span class="text-primary">help</span> to view available commands, or click the quick action tags below.', 'text-secondary');
     this.printLine(' ', 'text-secondary');
-    
+
     this.updateCursorPosition();
     this.input.focus({ preventScroll: true });
   }
@@ -94,16 +94,16 @@ export class TerminalSimulator {
 
   executeCommand(commandStr) {
     if (!commandStr) return;
-    
+
     this.printPrompt(commandStr);
-    
+
     // Save to history
     this.history.push(commandStr);
     this.historyIndex = -1;
-    
+
     const parts = commandStr.toLowerCase().split(' ');
     const cmd = parts[0];
-    
+
     switch (cmd) {
       case 'help':
         this.printHelp();
@@ -165,7 +165,7 @@ export class TerminalSimulator {
     this.printLine('  1. <strong style="color:#38bdf8;">Sector Educational Institute Management System</strong> <span style="color:#cbd5e1">- Full-stack NestJS + React platform (Upgraded 3rd-Year Project) featuring Barcode Attendance, 75/25 Teacher Commission Splits, F2 Cashier Billing, Ctrl+K Palette, & Headless PDF Receipts.</span>', 'terminal-output');
     this.printLine('  2. <strong style="color:#38bdf8;">SL-GreenRoot Market</strong> <span style="color:#cbd5e1">- Secure Supermarket Inventory & POS System (Python 3.11, Django 5, Tailwind CSS, PostgreSQL, Supabase, Vercel).</span>', 'terminal-output');
     this.printLine('  3. <strong style="color:#38bdf8;">Sector Education Institute Website</strong> <span style="color:#cbd5e1">- Modern web portal (React, Vite, Tailwind CSS, Firebase Firestore & SSR). Live: https://sectorinstitute.lk</span>', 'terminal-output');
-    this.printLine('  4. <strong style="color:#38bdf8;">Desktop Educational App</strong> <span style="color:#cbd5e1">- Desktop management console layout (Java Swing, NetBeans).</span>', 'terminal-output');
+    this.printLine('  4. <strong style="color:#10b981;">EcoCheck</strong> <span style="color:#cbd5e1">- Full-Stack Climate Action & Carbon Tracking Platform (Java 25, Spring Boot 4.1, React 19, Vite 8, MySQL, Spring Security, JWT, Bruno API).</span>', 'terminal-output');
     this.printLine('  5. <strong style="color:#38bdf8;">Vehicle Management System (VehicleOS)</strong> <span style="color:#cbd5e1">- Decoupled full-stack fleet tracking system (Java 21, Spring Boot 3.4, React 19, Vite, H2 DB).</span>', 'terminal-output');
   }
 

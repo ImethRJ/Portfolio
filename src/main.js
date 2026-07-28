@@ -166,17 +166,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // 9. Sector Educational Institute Modal Handling
   const sectorModal = document.getElementById('sector-modal');
-  const openModalBtns = document.querySelectorAll('.open-sector-modal-btn');
   const closeModalBtn = document.getElementById('close-sector-modal');
 
-  openModalBtns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
+  // Use event delegation for all modal open triggers
+  document.addEventListener('click', (e) => {
+    const trigger = e.target.closest('.open-sector-modal-btn');
+    if (trigger) {
       e.preventDefault();
       if (sectorModal) {
         sectorModal.classList.add('active');
         document.body.style.overflow = 'hidden'; // Prevent background scrolling
       }
-    });
+    }
   });
 
   if (closeModalBtn && sectorModal) {

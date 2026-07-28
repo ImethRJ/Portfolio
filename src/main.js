@@ -103,38 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // 7. Filter Projects
-  const filterButtons = document.querySelectorAll('.filter-btn');
-  const projectCards = document.querySelectorAll('.project-card');
 
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      // Toggle button active state
-      filterButtons.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      
-      const filterValue = btn.getAttribute('data-filter');
-      
-      projectCards.forEach(card => {
-        const category = card.getAttribute('data-category');
-        
-        // Apply animation classes
-        if (filterValue === 'all' || category === filterValue) {
-          card.style.display = 'flex';
-          setTimeout(() => {
-            card.style.opacity = '1';
-            card.style.transform = 'scale(1)';
-          }, 50);
-        } else {
-          card.style.opacity = '0';
-          card.style.transform = 'scale(0.9)';
-          setTimeout(() => {
-            card.style.display = 'none';
-          }, 300);
-        }
-      });
-    });
-  });
 
   // 8. Contact Form Handling
   const contactForm = document.getElementById('contact-form');

@@ -141,7 +141,7 @@ export class TerminalSimulator {
   }
 
   printHelp() {
-    this.printLine('Available CLI Commands:', 'terminal-output');
+    this.printLine('<div style="color:#38bdf8; font-weight:600; margin-bottom:0.25rem;">Available CLI Commands:</div>', 'terminal-output');
     this.printLine(`
       <table class="terminal-table">
         <tr><td>about</td><td>View profile bio and career motivations.</td></tr>
@@ -149,41 +149,41 @@ export class TerminalSimulator {
         <tr><td>projects</td><td>Highlighted software development works summary.</td></tr>
         <tr><td>contact</td><td>View contact email, phone, and locations.</td></tr>
         <tr><td>clear</td><td>Clears the terminal console workspace screen.</td></tr>
-        <tr><td>secret</td><td>Launch guessing game.</td></tr>
+        <tr><td>secret</td><td>Launch interactive guessing game.</td></tr>
       </table>
     `, 'terminal-output');
   }
 
   printAbout() {
-    this.printLine('Core Engineering Profile:', 'terminal-output');
-    this.printLine('  I am a Software Engineering Graduate (BSc Hons, 2nd Upper from University of Bedfordshire). My drive is to build collaborative systems and create engaging user experiences while exploring new frameworks. I have experience working as an Undergraduate Trainee at Hatton National Bank monitoring queue system infrastructure.', 'terminal-output');
+    this.printLine('<div style="color:#38bdf8; font-weight:600; margin-bottom:0.35rem;">Core Engineering Profile:</div>', 'terminal-output');
+    this.printLine('  <span style="color:#f1f5f9; line-height:1.6;">I am a Software Engineering Graduate (BSc Hons, 2nd Upper Division from University of Bedfordshire). My passion lies in building collaborative systems, designing responsive user interfaces, and writing clean, scalable code. Experience includes serving as an Undergraduate Trainee at Hatton National Bank, overseeing network-wide Queue Management System operations.</span>', 'terminal-output');
   }
 
   printSkills() {
-    this.printLine('Technical Skills Inventory:', 'terminal-output');
+    this.printLine('<div style="color:#38bdf8; font-weight:600; margin-bottom:0.25rem;">Technical Skills Inventory:</div>', 'terminal-output');
     this.printLine(`
       <table class="terminal-table">
-        <tr><td>Languages</td><td>Java, JavaScript, Python, C++, C, SQL</td></tr>
-        <tr><td>Frameworks</td><td>React, Spring Boot, Flutter, Node.js</td></tr>
-        <tr><td>Web Dev</td><td>HTML5, CSS3, JavaScript, PHP, Bootstrap</td></tr>
-        <tr><td>Databases</td><td>MySQL, Firebase</td></tr>
-        <tr><td>IDEs & Tools</td><td>GitHub, VS Code, Apache NetBeans, IntelliJ IDEA, Android Studio, Git</td></tr>
-        <tr><td>Interests</td><td>AI Development, Claude, Prompt Engineering</td></tr>
+        <tr><td>Languages</td><td>Java, JavaScript (ES6+), Python, C++, C, SQL</td></tr>
+        <tr><td>Frameworks</td><td>React, Spring Boot, Flutter, Node.js, NestJS, Django</td></tr>
+        <tr><td>Web Dev</td><td>HTML5, CSS3, Tailwind CSS, PHP, Vite</td></tr>
+        <tr><td>Databases</td><td>PostgreSQL, MySQL, Firebase, Redis</td></tr>
+        <tr><td>IDEs & Tools</td><td>GitHub, VS Code, Docker, NetBeans, IntelliJ IDEA, Git</td></tr>
+        <tr><td>Interests</td><td>AI Integration, System Architecture, Prompt Engineering</td></tr>
       </table>
     `, 'terminal-output');
   }
 
   printProjects() {
-    this.printLine('Software Engineering Projects:', 'terminal-output');
-    this.printLine('  1. <strong style="color:#00F2FE">Sector Educational Institute Management System</strong> - Full-stack NestJS + React platform (Upgraded 3rd-Year Project) featuring Barcode Attendance, 75/25 Teacher Commission Splits, F2 Cashier Billing, Ctrl+K Palette, & Headless PDF Receipts.', 'terminal-output');
-    this.printLine('  2. <strong style="color:#00F2FE">SL-GreenRoot Market</strong> - Secure Supermarket Inventory & POS System (Python 3.11, Django 5, Tailwind CSS, PostgreSQL, Supabase, Vercel).', 'terminal-output');
-    this.printLine('  3. <strong style="color:#00F2FE">Vehicle Management System</strong> - Full-stack data portal calling Spring Boot APIs (React, Node, Java).', 'terminal-output');
-    this.printLine('  4. <strong style="color:#00F2FE">Educational E-Commerce</strong> - Custom authentication web store (PHP, HTML/CSS, SQL, WAMP).', 'terminal-output');
-    this.printLine('  5. <strong style="color:#00F2FE">Desktop Educational App</strong> - Desktop management console layout (Java Swing, NetBeans).', 'terminal-output');
+    this.printLine('<div style="color:#38bdf8; font-weight:600; margin-bottom:0.5rem;">Featured Engineering Projects:</div>', 'terminal-output');
+    this.printLine('  1. <strong style="color:#38bdf8;">Sector Educational Institute Management System</strong> <span style="color:#cbd5e1">- Full-stack NestJS + React platform (Upgraded 3rd-Year Project) featuring Barcode Attendance, 75/25 Teacher Commission Splits, F2 Cashier Billing, Ctrl+K Palette, & Headless PDF Receipts.</span>', 'terminal-output');
+    this.printLine('  2. <strong style="color:#38bdf8;">SL-GreenRoot Market</strong> <span style="color:#cbd5e1">- Secure Supermarket Inventory & POS System (Python 3.11, Django 5, Tailwind CSS, PostgreSQL, Supabase, Vercel).</span>', 'terminal-output');
+    this.printLine('  3. <strong style="color:#38bdf8;">Vehicle Management System</strong> <span style="color:#cbd5e1">- Full-stack data portal calling Spring Boot APIs (React, Node, Java).</span>', 'terminal-output');
+    this.printLine('  4. <strong style="color:#38bdf8;">Educational E-Commerce</strong> <span style="color:#cbd5e1">- Custom authentication web store (PHP, HTML/CSS, SQL, WAMP).</span>', 'terminal-output');
+    this.printLine('  5. <strong style="color:#38bdf8;">Desktop Educational App</strong> <span style="color:#cbd5e1">- Desktop management console layout (Java Swing, NetBeans).</span>', 'terminal-output');
   }
 
   printContact() {
-    this.printLine('Connect with Imeth:', 'terminal-output');
+    this.printLine('<div style="color:#38bdf8; font-weight:600; margin-bottom:0.25rem;">Connect with Imeth:</div>', 'terminal-output');
     this.printLine(`
       <table class="terminal-table">
         <tr><td>Email</td><td>imethjayasinghe02@gmail.com</td></tr>
@@ -198,11 +198,11 @@ export class TerminalSimulator {
     this.isGameActive = true;
     this.secretNumber = Math.floor(Math.random() * 20) + 1;
     this.gameAttempts = 0;
-    this.printLine('========================================', 'text-primary');
-    this.printLine('🎲 Welcome to the Secret Number Game!', 'text-primary');
-    this.printLine('I have generated a random number between 1 and 20.', 'terminal-output');
-    this.printLine('Try to guess it! Type your number below:', 'terminal-output');
-    this.printLine('========================================', 'text-primary');
+    this.printLine('========================================', 'terminal-prompt');
+    this.printLine('🎲 Welcome to the Secret Number Game!', 'terminal-prompt');
+    this.printLine('<span style="color:#e2e8f0;">I have generated a random number between 1 and 20.</span>', 'terminal-output');
+    this.printLine('<span style="color:#e2e8f0;">Try to guess it! Type your number below:</span>', 'terminal-output');
+    this.printLine('========================================', 'terminal-prompt');
   }
 
   handleGame(guessStr) {
@@ -215,14 +215,14 @@ export class TerminalSimulator {
     }
     
     if (guess === this.secretNumber) {
-      this.printLine(`🎉 Congratulations! You guessed the number ${this.secretNumber} in ${this.gameAttempts} attempts.`, 'color-success');
-      this.printLine('Secret unlocked: You have proven your developer debugging skill! 🚀', 'color-success');
+      this.printLine(`<span style="color:#10b981; font-weight:600;">🎉 Congratulations! You guessed the number ${this.secretNumber} in ${this.gameAttempts} attempts.</span>`, 'terminal-output');
+      this.printLine('<span style="color:#10b981; font-weight:600;">Secret unlocked: You have proven your developer debugging skill! 🚀</span>', 'terminal-output');
       this.isGameActive = false;
       this.secretNumber = null;
     } else if (guess < this.secretNumber) {
-      this.printLine('Too low! Try again:', 'terminal-output');
+      this.printLine('<span style="color:#f59e0b;">Too low! Try again:</span>', 'terminal-output');
     } else {
-      this.printLine('Too high! Try again:', 'terminal-output');
+      this.printLine('<span style="color:#f59e0b;">Too high! Try again:</span>', 'terminal-output');
     }
   }
 }

@@ -40,7 +40,7 @@ export class ParticleNetwork {
       const y = Math.random() * (this.canvas.height - size * 2) + size;
       const directionX = (Math.random() * 0.4) - 0.2;
       const directionY = (Math.random() * 0.4) - 0.2;
-      const color = 'rgba(0, 242, 254, 0.45)';
+      const color = 'rgba(2, 132, 199, 0.35)';
       
       this.particles.push(new Particle(x, y, directionX, directionY, size, color));
     }
@@ -69,8 +69,8 @@ export class ParticleNetwork {
         
         if (distance < maxDistance) {
           opacityValue = 1 - (distance / maxDistance);
-          // Accent neon colors for the lines
-          this.ctx.strokeStyle = `rgba(79, 172, 254, ${opacityValue * 0.12})`;
+          // Accent colors for the lines on light canvas
+          this.ctx.strokeStyle = `rgba(79, 70, 229, ${opacityValue * 0.12})`;
           this.ctx.lineWidth = 1;
           this.ctx.beginPath();
           this.ctx.moveTo(this.particles[a].x, this.particles[a].y);
@@ -87,7 +87,7 @@ export class ParticleNetwork {
         
         if (distance < this.mouse.radius) {
           opacityValue = 1 - (distance / this.mouse.radius);
-          this.ctx.strokeStyle = `rgba(0, 242, 254, ${opacityValue * 0.25})`;
+          this.ctx.strokeStyle = `rgba(2, 132, 199, ${opacityValue * 0.25})`;
           this.ctx.lineWidth = 1;
           this.ctx.beginPath();
           this.ctx.moveTo(this.particles[a].x, this.particles[a].y);
@@ -113,8 +113,8 @@ class Particle {
     ctx.beginPath();
     ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
     ctx.fillStyle = this.color;
-    ctx.shadowBlur = 8;
-    ctx.shadowColor = '#00F2FE';
+    ctx.shadowBlur = 6;
+    ctx.shadowColor = '#0284C7';
     ctx.fill();
     ctx.shadowBlur = 0; // reset
   }

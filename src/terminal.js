@@ -9,9 +9,6 @@ export class TerminalSimulator {
     
     this.history = [];
     this.historyIndex = -1;
-    this.isGameActive = false;
-    this.secretNumber = null;
-    this.gameAttempts = 0;
     
     this.init();
   }
@@ -107,12 +104,6 @@ export class TerminalSimulator {
     const parts = commandStr.toLowerCase().split(' ');
     const cmd = parts[0];
     
-    // If mini-game is active
-    if (this.isGameActive) {
-      this.handleGame(commandStr);
-      return;
-    }
-    
     switch (cmd) {
       case 'help':
         this.printHelp();
@@ -132,11 +123,8 @@ export class TerminalSimulator {
       case 'clear':
         this.body.innerHTML = '';
         break;
-      case 'secret':
-        this.startSecretGame();
-        break;
       default:
-        this.printLine(`Command not found: <span style="color:#ef4444">${commandStr}</span>. Type <span style="color:#00F2FE">help</span> for assistance.`, 'terminal-output');
+        this.printLine(`Command not found: <span style="color:#ef4444">${commandStr}</span>. Type <span style="color:#38bdf8">help</span> for assistance.`, 'terminal-output');
     }
   }
 
@@ -149,7 +137,6 @@ export class TerminalSimulator {
         <tr><td>projects</td><td>Highlighted software development works summary.</td></tr>
         <tr><td>contact</td><td>View contact email, phone, and locations.</td></tr>
         <tr><td>clear</td><td>Clears the terminal console workspace screen.</td></tr>
-        <tr><td>secret</td><td>Launch interactive guessing game.</td></tr>
       </table>
     `, 'terminal-output');
   }
@@ -192,37 +179,5 @@ export class TerminalSimulator {
         <tr><td>LinkedIn</td><td>linkedin.com/in/imeth-jayasinghe</td></tr>
       </table>
     `, 'terminal-output');
-  }
-
-  startSecretGame() {
-    this.isGameActive = true;
-    this.secretNumber = Math.floor(Math.random() * 20) + 1;
-    this.gameAttempts = 0;
-    this.printLine('========================================', 'terminal-prompt');
-    this.printLine('🎲 Welcome to the Secret Number Game!', 'terminal-prompt');
-    this.printLine('<span style="color:#e2e8f0;">I have generated a random number between 1 and 20.</span>', 'terminal-output');
-    this.printLine('<span style="color:#e2e8f0;">Try to guess it! Type your number below:</span>', 'terminal-output');
-    this.printLine('========================================', 'terminal-prompt');
-  }
-
-  handleGame(guessStr) {
-    const guess = parseInt(guessStr, 10);
-    this.gameAttempts++;
-    
-    if (isNaN(guess)) {
-      this.printLine('Please enter a valid number between 1 and 20.', 'terminal-output');
-      return;
-    }
-    
-    if (guess === this.secretNumber) {
-      this.printLine(`<span style="color:#10b981; font-weight:600;">🎉 Congratulations! You guessed the number ${this.secretNumber} in ${this.gameAttempts} attempts.</span>`, 'terminal-output');
-      this.printLine('<span style="color:#10b981; font-weight:600;">Secret unlocked: You have proven your developer debugging skill! 🚀</span>', 'terminal-output');
-      this.isGameActive = false;
-      this.secretNumber = null;
-    } else if (guess < this.secretNumber) {
-      this.printLine('<span style="color:#f59e0b;">Too low! Try again:</span>', 'terminal-output');
-    } else {
-      this.printLine('<span style="color:#f59e0b;">Too high! Try again:</span>', 'terminal-output');
-    }
   }
 }

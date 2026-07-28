@@ -179,7 +179,7 @@ export class TerminalSimulator {
     this.printLine('  2. <strong style="color:#38bdf8;">SL-GreenRoot Market</strong> <span style="color:#cbd5e1">- Secure Supermarket Inventory & POS System (Python 3.11, Django 5, Tailwind CSS, PostgreSQL, Supabase, Vercel).</span>', 'terminal-output');
     this.printLine('  3. <strong style="color:#38bdf8;">Sector Education Institute Website</strong> <span style="color:#cbd5e1">- Modern web portal (React, Vite, Tailwind CSS, Firebase Firestore & SSR). Live: https://sectorinstitute.lk</span>', 'terminal-output');
     this.printLine('  4. <strong style="color:#38bdf8;">Desktop Educational App</strong> <span style="color:#cbd5e1">- Desktop management console layout (Java Swing, NetBeans).</span>', 'terminal-output');
-    this.printLine('  5. <strong style="color:#38bdf8;">Vehicle Management System</strong> <span style="color:#cbd5e1">- Full-stack data portal calling Spring Boot APIs (React, Node, Java).</span>', 'terminal-output');
+    this.printLine('  5. <strong style="color:#38bdf8;">Vehicle Management System (VehicleOS)</strong> <span style="color:#cbd5e1">- Decoupled full-stack fleet tracking system (Java 21, Spring Boot 3.4, React 19, Vite, H2 DB).</span>', 'terminal-output');
   }
 
   printContact() {

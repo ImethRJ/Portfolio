@@ -542,47 +542,53 @@
           </div>
         </div>
 
-        <!-- Project 5: Simple Vehicle Management System -->
+        <!-- Project 5: Vehicle Management System (VehicleOS) -->
         <div class="glass-card project-card" data-category="fullstack">
           <div class="project-img-wrapper">
             <div
               style="background: linear-gradient(135deg, #4c1d95 0%, #111827 50%, #6b21a8 100%); width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 2.5rem; color: #a855f7; text-align: center; padding: 1rem;">
-              <i class="fa-solid fa-car"></i>
+              <i class="fa-solid fa-car-side"></i>
               <span
-                style="font-size: 0.75rem; font-family: var(--font-mono); color: #fff; margin-top: 0.5rem; letter-spacing: 1px;">SPRING
-                BOOT API</span>
+                style="font-size: 0.75rem; font-family: var(--font-mono); color: #fff; margin-top: 0.5rem; letter-spacing: 1px;">VEHICLEOS
+                PLATFORM</span>
             </div>
             <div class="project-overlay">
               <div class="project-links">
-                <a href="https://github.com/ImethRJ/Vehicle-Management-System-using-Spring-Boot.git" target="_blank"
+                <a href="#vehicleos-modal" class="open-vehicleos-modal-btn"
+                  title="View System Architecture & Features"><i class="fa-solid fa-layer-group"></i>
+                  Architecture</a>
+                <a href="https://github.com/ImethRJ/Vehicle-Management-System-using-Spring-Boot" target="_blank"
                   title="GitHub Repo" class="icon-only"><i class="fa-brands fa-github"></i></a>
-                <a href="#" target="_blank" title="Live Demo" class="icon-only"><i
-                    class="fa-solid fa-arrow-up-right-from-square"></i></a>
               </div>
             </div>
           </div>
           <div style="margin-bottom: 0.5rem;">
             <span
               style="background: rgba(168, 85, 247, 0.12); border: 1px solid rgba(168, 85, 247, 0.4); color: #a855f7; padding: 0.2rem 0.6rem; border-radius: 12px; font-size: 0.75rem; font-family: var(--font-mono); font-weight: 600; display: inline-flex; align-items: center; gap: 0.35rem;">
-              <i class="fa-solid fa-gears"></i> Full-Stack API Architecture
+              <i class="fa-solid fa-gears"></i> Decoupled Fleet Control System
             </span>
           </div>
           <div class="project-tags">
-            <span class="project-tag">React</span>
-            <span class="project-tag">Node.js</span>
-            <span class="project-tag">Spring Boot</span>
-            <span class="project-tag">Java</span>
+            <span class="project-tag">Java 21</span>
+            <span class="project-tag">Spring Boot 3.4</span>
+            <span class="project-tag">React 19</span>
+            <span class="project-tag">Vite</span>
+            <span class="project-tag">H2 DB</span>
+            <span class="project-tag">Spring Data JPA</span>
+            <span class="project-tag">Hibernate</span>
           </div>
-          <h3 class="project-title">🚗 Vehicle Management System</h3>
+          <h3 class="project-title">🚗 Vehicle Management System (VehicleOS)</h3>
           <p class="project-desc">
-            Full-stack management solution with REST API integrations calling from React frontend to Java Spring Boot
-            backend database instances.
+            Decoupled full-stack fleet tracking control system. Features live status dashboards (Available, Sold, Maintenance), instant VIN search & status filters, Bean Validation guardrails, REST APIs, and H2 database persistence.
           </p>
-          <div style="margin-top: auto; padding-top: 1rem;">
-            <a href="https://github.com/ImethRJ/Vehicle-Management-System-using-Spring-Boot.git" target="_blank"
-              class="btn btn-outline"
-              style="width: 100%; justify-content: center; font-size: 0.85rem; padding: 0.5rem 1rem;">
-              View Repository <i class="fa-brands fa-github"></i>
+          <div style="margin-top: auto; padding-top: 1rem; display: flex; gap: 0.5rem;">
+            <a href="#vehicleos-modal" class="btn btn-outline open-vehicleos-modal-btn"
+              style="flex: 1.3; justify-content: center; font-size: 0.825rem; padding: 0.5rem 0.5rem;">
+              Architecture <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="https://github.com/ImethRJ/Vehicle-Management-System-using-Spring-Boot" target="_blank" class="btn btn-primary"
+              style="font-size: 0.85rem; padding: 0.5rem 0.85rem;">
+              GitHub Repo <i class="fa-brands fa-github"></i>
             </a>
           </div>
         </div>
@@ -1105,6 +1111,156 @@
               <li><strong>Analytics:</strong> Google Analytics 4 (<code>react-ga4</code>)</li>
               <li><strong>SEO Management:</strong> <code>react-helmet-async</code></li>
             </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vehicle Management System (VehicleOS) Modal -->
+  <div id="vehicleos-modal" class="modal-overlay">
+    <div class="modal-content glass-card">
+      <div class="modal-header">
+        <div>
+          <span
+            style="background: rgba(168, 85, 247, 0.15); border: 1px solid #a855f7; color: #a855f7; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; font-family: var(--font-mono); font-weight: 600; display: inline-flex; align-items: center; gap: 0.4rem;">
+            <i class="fa-solid fa-car-side"></i> Decoupled Full-Stack Architecture
+          </span>
+          <h2 style="font-size: 1.8rem; margin-top: 0.75rem; color: #0f172a;">🚗 Vehicle Management System (VehicleOS)</h2>
+          <p style="color: #a855f7; font-family: var(--font-mono); font-size: 0.95rem;">
+            A Decoupled Full-Stack Web Application to Track, Manage, and Monitor Vehicle Fleets
+          </p>
+        </div>
+        <button class="modal-close-btn" id="close-vehicleos-modal" aria-label="Close modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-callout" style="border-left-color: #a855f7; background: rgba(168, 85, 247, 0.06);">
+          <i class="fa-solid fa-circle-info" style="color: #a855f7; font-size: 1.3rem;"></i>
+          <div>
+            <strong>Project Overview:</strong> Think of VehicleOS as a <strong>digital control center</strong> for car dealerships or rental fleets. Instead of using complex spreadsheets, this application provides a visual dashboard to manage vehicle inventory, statuses, and pricing.<br><br>
+            📁 <strong>GitHub Repository:</strong> <a href="https://github.com/ImethRJ/Vehicle-Management-System-using-Spring-Boot" target="_blank" style="color: #a855f7; text-decoration: underline; font-weight: 600;">GitHub Repo Link</a>
+          </div>
+        </div>
+
+        <h3 style="font-size: 1.3rem; color: #0f172a; margin-bottom: 1rem;">🌟 Non-Technical Highlights (Business View)</h3>
+        <div class="modal-features-grid">
+          <div class="feature-card">
+            <div class="feature-icon" style="color: #a855f7;"><i class="fa-solid fa-chart-pie"></i></div>
+            <h4>📊 Live Fleet Dashboard</h4>
+            <p>Instantly track total vehicles in fleet, ready-to-drive units (<code>Available</code>), completed sales (<code>Sold</code>), and vehicles undergoing maintenance (<code>In Maintenance</code>).</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon" style="color: #a855f7;"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <h4>⚡ Instant Search & Filter</h4>
+            <p>Type any color, model, status, or VIN number to filter vehicles instantly with real-time UI response.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon" style="color: #a855f7;"><i class="fa-solid fa-square-plus"></i></div>
+            <h4>📝 Fleet Registrations & Updates</h4>
+            <p>Add new vehicles to the fleet or update statuses and prices using simple, guided modal forms.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon" style="color: #a855f7;"><i class="fa-solid fa-shield-cat"></i></div>
+            <h4>🛡️ Data Integrity Guardrails</h4>
+            <p>Prevents formatting mistakes, short VIN inputs, or negative pricing via Jakarta Bean Validation annotations.</p>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 2.5rem; font-size: 1.3rem; color: #0f172a; margin-bottom: 0.5rem;">💻 Technical Architecture & Execution Flow</h3>
+        <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1rem;">
+          Decoupled client-server architecture dividing React 19 presentation from Spring Boot 3 backend logic.
+        </p>
+
+        <div class="arch-box">
+          <pre>
+ 1. Frontend (React 19) ──────► Native Fetch API (Async HTTP GET/POST/PUT/DELETE)
+ 2. CORS Security Config  ────► Intercepts and authorizes cross-origin port requests (8080/5173)
+ 3. Spring MVC Controller ───► Serializes/Deserializes JSON models & Bean Validations
+ 4. Service Layer ────────────► Enforces business logic & VIN database uniqueness check
+ 5. Spring Data JPA ──────────► Translates operations to SQL via Hibernate ORM
+ 6. H2 SQL Database ──────────► Stores active records in high-performance in-memory tables</pre>
+        </div>
+
+        <h3 style="margin-top: 2rem; font-size: 1.2rem; color: #0f172a; margin-bottom: 0.75rem;">🔌 REST API Endpoints Summary</h3>
+        <p style="color: var(--text-muted); font-size: 0.85rem; font-family: var(--font-mono); margin-bottom: 0.75rem;">
+          Base URL: <code>http://localhost:8080/api/vehicles</code>
+        </p>
+        <div class="arch-box" style="padding: 0;">
+          <table class="terminal-table" style="width: 100%; border-collapse: collapse; font-size: 0.85rem;">
+            <thead>
+              <tr style="border-bottom: 1px solid #1e293b; text-align: left; color: #38bdf8;">
+                <th style="padding: 0.5rem 0.75rem;">Method</th>
+                <th style="padding: 0.5rem 0.75rem;">Endpoint</th>
+                <th style="padding: 0.5rem 0.75rem;">Param</th>
+                <th style="padding: 0.5rem 0.75rem;">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                <td style="padding: 0.5rem 0.75rem; color: #10b981; font-weight: 600;">GET</td>
+                <td style="padding: 0.5rem 0.75rem; color: #f8fafc;">/api/vehicles</td>
+                <td style="padding: 0.5rem 0.75rem; color: #38bdf8;">search (Optional)</td>
+                <td style="padding: 0.5rem 0.75rem; color: #94a3b8;">Retrieves all vehicles or searches by make, model, color, status, or VIN.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                <td style="padding: 0.5rem 0.75rem; color: #10b981; font-weight: 600;">GET</td>
+                <td style="padding: 0.5rem 0.75rem; color: #f8fafc;">/api/vehicles/{id}</td>
+                <td style="padding: 0.5rem 0.75rem; color: #64748b;">-</td>
+                <td style="padding: 0.5rem 0.75rem; color: #94a3b8;">Retrieves a single vehicle by primary key ID.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                <td style="padding: 0.5rem 0.75rem; color: #3b82f6; font-weight: 600;">POST</td>
+                <td style="padding: 0.5rem 0.75rem; color: #f8fafc;">/api/vehicles</td>
+                <td style="padding: 0.5rem 0.75rem; color: #64748b;">-</td>
+                <td style="padding: 0.5rem 0.75rem; color: #94a3b8;">Registers a new vehicle with unique VIN verification.</td>
+              </tr>
+              <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+                <td style="padding: 0.5rem 0.75rem; color: #f59e0b; font-weight: 600;">PUT</td>
+                <td style="padding: 0.5rem 0.75rem; color: #f8fafc;">/api/vehicles/{id}</td>
+                <td style="padding: 0.5rem 0.75rem; color: #64748b;">-</td>
+                <td style="padding: 0.5rem 0.75rem; color: #94a3b8;">Updates details of an existing vehicle by ID.</td>
+              </tr>
+              <tr>
+                <td style="padding: 0.5rem 0.75rem; color: #ef4444; font-weight: 600;">DELETE</td>
+                <td style="padding: 0.5rem 0.75rem; color: #f8fafc;">/api/vehicles/{id}</td>
+                <td style="padding: 0.5rem 0.75rem; color: #64748b;">-</td>
+                <td style="padding: 0.5rem 0.75rem; color: #94a3b8;">Permanently removes a vehicle from fleet records.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="tech-details-grid" style="margin-top: 2rem;">
+          <div class="tech-col">
+            <h4>☕ Backend Tech Stack</h4>
+            <ul>
+              <li><strong>Runtime:</strong> Java 21 (LTS)</li>
+              <li><strong>Framework:</strong> Spring Boot 3.4.1 (Web, Data JPA)</li>
+              <li><strong>Database:</strong> H2 Engine (In-Memory SQL)</li>
+              <li><strong>Build Tool:</strong> Apache Maven</li>
+            </ul>
+          </div>
+
+          <div class="tech-col">
+            <h4>⚛️ Frontend Tech Stack</h4>
+            <ul>
+              <li><strong>UI Framework:</strong> React 19 (Single-Page Component App)</li>
+              <li><strong>Build Tool:</strong> Vite</li>
+              <li><strong>Styling:</strong> Vanilla CSS Design System</li>
+              <li><strong>Iconography:</strong> Lucide React</li>
+            </ul>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 2rem; font-size: 1.2rem; color: #0f172a; margin-bottom: 0.5rem;">🚀 Local Execution Guide</h3>
+        <div class="modal-callout" style="background: rgba(15, 23, 42, 0.03); border-left-color: #0f172a;">
+          <div>
+            <strong>1. Start Spring Boot Server:</strong> <code>cd backend && mvn spring-boot:run</code> (Port 8080 | H2 Console: <code>http://localhost:8080/h2-console</code>)<br>
+            <strong>2. Start React App:</strong> <code>cd frontend && npm install && npm run dev</code> (Port 5173)
           </div>
         </div>
       </div>

@@ -472,10 +472,14 @@
           <p class="project-desc">
             Modern, high-performance web portal for Sector Education Institute (Panadura). Digital hub for students & parents to access tutor details, real-time Firestore timetables, client-side image compression, and Firebase Functions SSR.
           </p>
-          <div style="margin-top: auto; padding-top: 1rem;">
+          <div style="margin-top: auto; padding-top: 1rem; display: flex; gap: 0.5rem;">
+            <a href="#sector-web-modal" class="btn btn-outline open-sector-web-modal-btn"
+              style="flex: 1.3; justify-content: center; font-size: 0.825rem; padding: 0.5rem 0.5rem;">
+              Explore Architecture & Features <i class="fa-solid fa-arrow-right"></i>
+            </a>
             <a href="https://sectorinstitute.lk" target="_blank" class="btn btn-primary"
-              style="width: 100%; justify-content: center; font-size: 0.85rem; padding: 0.5rem 1rem;">
-              Visit Live Website <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              style="font-size: 0.85rem; padding: 0.5rem 0.85rem;">
+              Live App <i class="fa-solid fa-arrow-up-right-from-square"></i>
             </a>
           </div>
         </div>
@@ -935,6 +939,125 @@
               <li><strong>Deployment:</strong> Vercel (Serverless WSGI)</li>
               <li><strong>Database:</strong> Supabase / PostgreSQL (Cloud Relational DB)</li>
               <li><strong>Static Assets:</strong> WhiteNoise WSGI engine</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sector Education Institute Website Modal -->
+  <div id="sector-web-modal" class="modal-overlay">
+    <div class="modal-content glass-card">
+      <div class="modal-header">
+        <div>
+          <span
+            style="background: rgba(56, 189, 248, 0.15); border: 1px solid #0284c7; color: #0284c7; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.8rem; font-family: var(--font-mono); font-weight: 600; display: inline-flex; align-items: center; gap: 0.4rem;">
+            <i class="fa-solid fa-globe"></i> Production Web Application
+          </span>
+          <h2 style="font-size: 1.8rem; margin-top: 0.75rem; color: #0f172a;">🏫 Sector Education Institute Website</h2>
+          <p style="color: var(--color-primary); font-family: var(--font-mono); font-size: 0.95rem;">
+            A Modern, High-Performance Web Portal for Sector Education Institute (Panadura)
+          </p>
+        </div>
+        <button class="modal-close-btn" id="close-sector-web-modal" aria-label="Close modal">&times;</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-callout">
+          <i class="fa-solid fa-circle-info" style="color: var(--color-primary); font-size: 1.3rem;"></i>
+          <div>
+            <strong>Project Overview:</strong> A modern, high-performance web application built for <strong>Sector Education Institute (Panadura, Sri Lanka)</strong>. This platform serves as the primary digital hub for students and parents to access information regarding tutors, class timetables, and institute notices in real time.<br><br>
+            🚀 <strong>Live Production Application:</strong> <a href="https://sectorinstitute.lk" target="_blank" style="color: var(--color-primary); text-decoration: underline; font-weight: 600;">https://sectorinstitute.lk</a>
+          </div>
+        </div>
+
+        <h3 style="font-size: 1.3rem; color: #0f172a; margin-bottom: 1rem;">🌟 Key System Features</h3>
+        <div class="modal-features-grid">
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-sliders"></i></div>
+            <h4>🎛️ Dynamic Content Management</h4>
+            <p>Admin management dashboard allowing institute staff to update teachers, announcements, and timetables in real time without code deployment.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+            <h4>📱 Fully Responsive UI</h4>
+            <p>Utility-first responsive design powered by Tailwind CSS, providing an optimal viewing experience across mobile phones, tablets, and desktops.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-bolt"></i></div>
+            <h4>⚡ Performance Optimization</h4>
+            <p>Code splitting and lazy loading for rapid initial page loads, paired with browser-side image compression (<code>browser-image-compression</code>) before cloud storage upload.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+            <h4>🔍 SEO & Social Media Friendly</h4>
+            <p>Server-Side Rendering (SSR) via Firebase Functions, IndexNow automatic indexing, dynamic document head management with <code>react-helmet-async</code>, and Google Analytics 4 integration.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid fa-fire"></i></div>
+            <h4>🔥 Real-Time Synchronization</h4>
+            <p>Instant live data updates and document syncing powered by Google Firebase Cloud Firestore database architecture.</p>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 2.5rem; font-size: 1.3rem; color: #0f172a; margin-bottom: 0.5rem;">🛠️ Technology Stack & Architecture</h3>
+        <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1rem;">
+          Single Page Application (SPA) built with React and Vite, integrated with Google Firebase Cloud Serverless Infrastructure.
+        </p>
+
+        <div class="arch-box">
+          <pre>
+   ┌─────────────────────────────────────────────────────────┐
+   │          Sector Education Institute Web Portal          │
+   └────────────────────────────┬────────────────────────────┘
+                                │
+        ┌───────────────────────┴───────────────────────┐
+        ▼                                               ▼
+ ┌──────────────┐                                ┌──────────────┐
+ │ React (Vite) │ ◄────── Real-time Sync ──────► │ Cloud        │
+ │ Tailwind CSS │                                │ Firestore DB │
+ └───────┬──────┘                                └──────────────┘
+         │                                              
+         ▼                                              
+ ┌──────────────┐                                ┌──────────────┐
+ │  Firebase    │ ◄────── SSR Functions ────────►│ Firebase     │
+ │ Cloud Storage│                                │ Hosting      │
+ └──────────────┘                                └──────────────┘</pre>
+        </div>
+
+        <div class="tech-details-grid">
+          <div class="tech-col">
+            <h4>💻 Frontend Stack</h4>
+            <ul>
+              <li><strong>UI Library:</strong> React (v18)</li>
+              <li><strong>Build Tool:</strong> Vite</li>
+              <li><strong>Styling:</strong> Tailwind CSS v3</li>
+              <li><strong>Routing:</strong> React Router DOM v6</li>
+              <li><strong>Icons:</strong> Lucide React</li>
+            </ul>
+          </div>
+
+          <div class="tech-col">
+            <h4>🔥 Backend & Cloud Services</h4>
+            <ul>
+              <li><strong>Web Hosting:</strong> Firebase Hosting</li>
+              <li><strong>Database:</strong> Firebase Cloud Firestore (NoSQL)</li>
+              <li><strong>Storage:</strong> Firebase Cloud Storage</li>
+              <li><strong>Serverless Functions:</strong> Firebase Functions (SSR & IndexNow)</li>
+            </ul>
+          </div>
+
+          <div class="tech-col">
+            <h4>📦 Key Libraries & Utilities</h4>
+            <ul>
+              <li><strong>Image Optimization:</strong> <code>browser-image-compression</code></li>
+              <li><strong>Analytics:</strong> Google Analytics 4 (<code>react-ga4</code>)</li>
+              <li><strong>SEO Management:</strong> <code>react-helmet-async</code></li>
             </ul>
           </div>
         </div>

@@ -163,4 +163,41 @@ document.addEventListener('DOMContentLoaded', () => {
     statusMsg.innerHTML = text;
     statusMsg.style.display = 'block';
   }
+
+  // 9. Sector Educational Institute Modal Handling
+  const sectorModal = document.getElementById('sector-modal');
+  const openModalBtns = document.querySelectorAll('.open-sector-modal-btn');
+  const closeModalBtn = document.getElementById('close-sector-modal');
+
+  openModalBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (sectorModal) {
+        sectorModal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent background scrolling
+      }
+    });
+  });
+
+  if (closeModalBtn && sectorModal) {
+    closeModalBtn.addEventListener('click', () => {
+      sectorModal.classList.remove('active');
+      document.body.style.overflow = 'auto';
+    });
+
+    sectorModal.addEventListener('click', (e) => {
+      if (e.target === sectorModal) {
+        sectorModal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && sectorModal.classList.contains('active')) {
+        sectorModal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+    });
+  }
 });
+

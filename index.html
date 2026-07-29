@@ -96,17 +96,21 @@
             <span class="terminal-btn minimize"></span>
             <span class="terminal-btn maximize"></span>
           </div>
-          <div class="terminal-title">guest@imeth-jayasinghe:~</div>
-          <div style="width: 42px;"></div> <!-- Spacer to center title -->
+          <div class="terminal-title">
+            <span class="prompt-full">guest@imeth-jayasinghe:~</span>
+            <span class="prompt-short">guest@imeth:~</span>
+          </div>
+          <div class="terminal-header-spacer"></div>
         </div>
         <div class="terminal-body">
           <!-- Lines inserted by JavaScript -->
         </div>
         <!-- Input line -->
-        <div
-          style="background: rgba(255,255,255,0.01); border-top: 1px solid rgba(255,255,255,0.04); padding: 0.75rem 1.5rem; display: flex; align-items: center; gap: 0.5rem;">
-          <span class="terminal-prompt"
-            style="font-family: var(--font-mono); font-size: 0.9rem;">guest@imeth-jayasinghe:~$</span>
+        <div class="terminal-input-bar">
+          <span class="terminal-prompt">
+            <span class="prompt-full">guest@imeth-jayasinghe:~$</span>
+            <span class="prompt-short">guest:~$</span>
+          </span>
           <div class="terminal-input-wrapper">
             <input type="text" class="terminal-input-element" spellcheck="false" autocomplete="off" placeholder="Select an option or type an option">
           </div>

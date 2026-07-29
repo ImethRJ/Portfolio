@@ -83,15 +83,42 @@
   margin-top: 0.25rem;
 }
 
-.terminal-prompt-line {
+.prompt-short {
+  display: none;
+}
+
+.prompt-full {
+  display: inline;
+}
+
+.terminal-header-spacer {
+  width: 42px;
+  flex-shrink: 0;
+}
+
+.terminal-input-bar {
+  background: rgba(255, 255, 255, 0.01);
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 0.75rem 1.25rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
 }
 
+.terminal-prompt-line {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
 .terminal-prompt {
   color: #38bdf8;
   font-weight: bold;
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .terminal-input-wrapper {
@@ -99,6 +126,7 @@
   flex-grow: 1;
   align-items: center;
   position: relative;
+  min-width: 0;
 }
 
 .terminal-input-element {
@@ -106,7 +134,7 @@
   border: none;
   color: #ffffff;
   font-family: inherit;
-  font-size: inherit;
+  font-size: 0.9rem;
   width: 100%;
   outline: none;
   caret-color: #38bdf8;
@@ -116,6 +144,9 @@
   color: #64748b;
   font-style: normal;
   opacity: 0.75;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 /* Styling command output tables or details */
@@ -169,51 +200,104 @@
 }
 
 /* Terminal Mobile Responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 640px) {
+  .prompt-full {
+    display: none !important;
+  }
+
+  .prompt-short {
+    display: inline !important;
+  }
+
   .terminal-container {
-    margin: 2rem auto;
-    border-radius: 10px;
+    margin: 1.5rem auto;
+    border-radius: 12px;
+  }
+
+  .terminal-header {
+    padding: 0.6rem 0.85rem;
+  }
+
+  .terminal-title {
+    font-size: 0.75rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .terminal-header-spacer {
+    width: 36px;
   }
 
   .terminal-body {
-    height: 320px;
-    padding: 1rem;
-    font-size: 0.875rem;
+    height: 310px;
+    padding: 0.85rem;
+    font-size: 0.85rem;
+    gap: 0.5rem;
+  }
+
+  .terminal-input-bar {
+    padding: 0.6rem 0.85rem;
+    gap: 0.4rem;
+  }
+
+  .terminal-prompt {
+    font-size: 0.825rem;
+  }
+
+  .terminal-input-element {
+    font-size: 0.825rem;
+  }
+
+  .terminal-input-element::placeholder {
+    font-size: 0.8rem;
+  }
+
+  .terminal-table td {
+    display: block;
+    width: 100% !important;
+    padding: 0.2rem 0;
+    font-size: 0.8rem;
+  }
+
+  .terminal-table td:first-child {
+    width: auto;
+    padding-top: 0.35rem;
   }
 
   .terminal-quick-links {
-    gap: 0.5rem;
+    gap: 0.4rem;
     margin-top: 1rem;
+    padding: 0 0.5rem;
   }
 
   .terminal-quick-cmd {
     font-size: 0.78rem;
     padding: 0.35rem 0.75rem;
   }
-
-  .terminal-table td {
-    padding: 0.25rem 0.4rem;
-    font-size: 0.825rem;
-  }
-
-  .terminal-table td:first-child {
-    width: 110px;
-  }
 }
 
-@media (max-width: 480px) {
-  .terminal-body {
-    height: 290px;
-    padding: 0.85rem 0.75rem;
-    font-size: 0.825rem;
-  }
-
-  .terminal-prompt-line {
-    flex-wrap: wrap;
-    gap: 0.25rem;
+@media (max-width: 400px) {
+  .terminal-input-bar {
+    padding: 0.5rem 0.65rem;
+    gap: 0.3rem;
   }
 
   .terminal-prompt {
-    font-size: 0.8rem;
+    font-size: 0.78rem;
+  }
+
+  .terminal-input-element {
+    font-size: 0.78rem;
+  }
+
+  .terminal-input-element::placeholder {
+    font-size: 0.72rem;
+    letter-spacing: -0.2px;
+  }
+
+  .terminal-quick-cmd {
+    font-size: 0.72rem;
+    padding: 0.3rem 0.6rem;
   }
 }

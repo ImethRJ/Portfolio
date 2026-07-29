@@ -75,7 +75,7 @@ export class TerminalSimulator {
   printPrompt(cmd) {
     const line = document.createElement('div');
     line.className = 'terminal-prompt-line';
-    line.innerHTML = `<span class="terminal-prompt">guest@imeth-jayasinghe:~$</span> <span style="color:#fff">${cmd}</span>`;
+    line.innerHTML = `<span class="terminal-prompt"><span class="prompt-full">guest@imeth-jayasinghe:~$</span><span class="prompt-short">guest:~$</span></span> <span style="color:#fff">${cmd}</span>`;
     this.body.appendChild(line);
   }
 

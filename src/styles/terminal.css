@@ -109,24 +109,13 @@
   font-size: inherit;
   width: 100%;
   outline: none;
-  caret-color: transparent;
+  caret-color: #38bdf8;
 }
 
-/* Custom Blinking Cursor */
-.terminal-custom-cursor {
-  position: absolute;
-  width: 8px;
-  height: 16px;
-  background: #38bdf8;
-  display: inline-block;
-  pointer-events: none;
-  animation: blink 1s step-end infinite;
-  transform: translateY(1px);
-}
-
-@keyframes blink {
-  from, to { background-color: transparent }
-  50% { background-color: #38bdf8; }
+.terminal-input-element::placeholder {
+  color: #64748b;
+  font-style: normal;
+  opacity: 0.75;
 }
 
 /* Styling command output tables or details */

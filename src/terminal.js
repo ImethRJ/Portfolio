@@ -5,7 +5,6 @@ export class TerminalSimulator {
 
     this.body = this.container.querySelector('.terminal-body');
     this.input = this.container.querySelector('.terminal-input-element');
-    this.cursor = this.container.querySelector('.terminal-custom-cursor');
 
     this.history = [];
     this.historyIndex = -1;
@@ -15,7 +14,6 @@ export class TerminalSimulator {
 
   init() {
     this.input.addEventListener('keydown', (e) => this.handleKeydown(e));
-    this.input.addEventListener('input', () => this.updateCursorPosition());
 
     // Clicking anywhere in the terminal body focuses input
     this.body.addEventListener('click', () => this.input.focus());
@@ -25,7 +23,6 @@ export class TerminalSimulator {
       btn.addEventListener('click', (e) => {
         const cmd = e.target.getAttribute('data-cmd');
         this.input.value = cmd;
-        this.updateCursorPosition();
         this.executeCommand(cmd);
       });
     });
@@ -35,14 +32,7 @@ export class TerminalSimulator {
     this.printLine('Type <span class="text-primary">help</span> to view available commands, or click the quick action tags below.', 'text-secondary');
     this.printLine(' ', 'text-secondary');
 
-    this.updateCursorPosition();
     this.input.focus({ preventScroll: true });
-  }
-
-  updateCursorPosition() {
-    const text = this.input.value;
-    const charWidth = 8.5;
-    this.cursor.style.left = `${text.length * charWidth}px`;
   }
 
   handleKeydown(e) {
@@ -50,7 +40,6 @@ export class TerminalSimulator {
       const command = this.input.value.trim();
       this.executeCommand(command);
       this.input.value = '';
-      this.updateCursorPosition();
     } else if (e.key === 'ArrowUp') {
       e.preventDefault();
       if (this.history.length > 0) {
@@ -60,7 +49,6 @@ export class TerminalSimulator {
           this.historyIndex--;
         }
         this.input.value = this.history[this.historyIndex];
-        this.updateCursorPosition();
       }
     } else if (e.key === 'ArrowDown') {
       e.preventDefault();
@@ -72,7 +60,6 @@ export class TerminalSimulator {
           this.historyIndex = -1;
           this.input.value = '';
         }
-        this.updateCursorPosition();
       }
     }
   }
